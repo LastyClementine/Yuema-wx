@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>YueMa-Test</title>
+    <link rel="stylesheet" href="../css/weui.min.css"/>
+    <link rel="stylesheet" href="../css/example.css"/>
+
+
+</head>
+<body ng-app="YuemaApp" ng-controller="YuemaAppCtrl">
+<div class="page">
+    <div class="hd">
+        <h1 class="page_title">YueMa-Test</h1>
+        <p class="page_desc">请选择您的空闲时间，系统自动为你匹配</p>
+    </div>
+    <br/>
+    <br/>
+    <div class="bd">
+        <div class="weui_cells weui_cells_access global_navs">
+            <a class="weui_cell js_cell" href="./Yuema-SetTime.html" ng-click="">
+
+                <div class="weui_cell_bd weui_cell_primary page_desc">
+                    <!--<info1></info1>-->
+                    <!--<info2></info2>-->
+                    <!--<info3></info3>-->
+                    <!--<info4></info4>-->
+                    <!--<info5></info5>-->
+                </div>
+                <div class="weui_cell_ft">
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="bd">
+        <br/>
+        <br/>
+        <div class="weui_cells_title">群成员</div>
+        <div class="weui_cells weui_cells_access">
+            <a class="weui_cell js_cell" href="./Yuema-Main.html">
+                <div class="weui_cell_hd"><img src="" alt="" style="width:30px;margin-right:10px;display:block"></div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p class="username"></p>
+                </div>
+                <div class="weui_cell_ft">
+                </div>
+            </a>
+            <a class="weui_cell js_cell" style="background-color: #f8f8f8" href="javascript:;">
+                <div class="weui_cell_hd"><img src="../images/icon_nav_toast.png" alt="" style="width:20px;margin-right:5px;display:block"></div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p class="page_desc">邀请新成员</p>
+                </div>
+                <div class="weui_cell_ft">
+                </div>
+            </a>
+        </div>
+    </div>
+    <br/>
+    <div class="button_lookfortime">
+        <a href="Yuema-Timeline.html" class="weui_btn weui_btn_primary">查看群成员共同时间</a>
+        <a href="" class="weui_btn weui_btn_primary" ng-click="getUserInfo()">查看群成员共同时间</a>
+    </div>
+</div>
+
+<script src="../js/angular.min.js"></script>
+<script src="../js/ngStorage_Yuema.js"></script>
+<script src="../js/App_Yuema.js"></script>
+
+
+
+</body>
+</html>

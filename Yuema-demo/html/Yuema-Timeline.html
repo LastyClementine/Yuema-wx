@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>Yuema-Timeline</title>
+    <link rel="stylesheet" href="../css/weui.min.css"/>
+    <link rel="stylesheet" href="../css/example.css"/>
+
+</head>
+<body ng-app="YuemaApp" ng-controller="">
+<div class="weui_cells">
+    <div class="date-btn-group">
+        <a href="javascript:;" class="week-btn weui_btn_mini weui_btn_default">今天</a>
+        <a href="javascript:;" class="week-btn weui_btn_mini weui_btn_default">周二</a>
+        <a href="javascript:;" class="week-btn weui_btn_mini weui_btn_default">周三</a>
+        <a href="javascript:;" class="week-btn weui_btn_mini weui_btn_default">周四</a>
+        <a href="javascript:;" class="week-btn weui_btn_mini weui_btn_default">周五</a>
+        <a href="javascript:;" class="week-btn weui_btn_mini weui_btn_default">周六</a>
+        <a href="javascript:;" class="week-btn weui_btn_mini weui_btn_default">周日</a>
+
+        <a href="javascript:;" class="date-btn weui_btn_plain_primary">12/16</a>
+        <a href="javascript:;" class="date-btn weui_btn_plain_primary">12/17</a>
+        <a href="javascript:;" class="date-btn weui_btn_plain_primary">12/18</a>
+        <a href="javascript:;" class="date-btn weui_btn_plain_primary">12/19</a>
+        <a href="javascript:;" class="date-btn weui_btn_plain_primary">12/20</a>
+        <a href="javascript:;" class="date-btn weui_btn_plain_primary">12/21</a>
+        <a href="javascript:;" class="date-btn weui_btn_plain_primary">12/22</a>
+    </div>
+</div>
+<div class="weui_cells_tips">底部说明文字底部说明文字</div>
+<br/>
+
+<div id="timeline" style="height: 280px;  margin: 0 auto"></div>
+
+<div class="" href="" style="position:absolute;left: 34%;top:20%;width: 5%; height: 32%;background-color: #F43530;opacity: 0.6"></div>
+
+<div class="weui_cells_title">匹配结果</div>
+<div class="weui_cells weui_cells_access">
+    <a class="weui_cell js_cell" href="javascript:;">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>匹配条件</p>
+        </div>
+        <div class="weui_cell_ft">未选择</div>
+    </a>
+    <a class="weui_cell js_cell" href="javascript:;">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>共同时间段</p>
+        </div>
+        <div class="weui_cell_ft">未匹配</div>
+    </a>
+    <a class="weui_cell js_cell" href="javascript:;">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>约定地点</p>
+        </div>
+        <div class="weui_cell_ft">未输入地点</div>
+    </a>
+</div>
+
+<div class="bd spacing"><br/>
+    <a href="javascript:;" class="weui_btn weui_btn_primary">群发匹配结果至活动群</a>
+</div>
+
+<script src="../js/angular.min.js"></script>
+<script src="../js/jquery-2.1.4.min.js"></script>
+<script src="../js/highcharts.js"></script>
+<script src="../js/highcharts-more.js"></script>
+<script src="../js/YuemaTest.js"></script>
+
+</body>
+</html>

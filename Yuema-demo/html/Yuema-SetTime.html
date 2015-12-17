@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>YueMa-SetTime</title>
+    <link rel="stylesheet" href="../css/weui.min.css"/>
+    <link rel="stylesheet" href="../css/example.css"/>
+
+</head>
+<body ng-app="YuemaApp" ng-controller="">
+<div class="page">
+    <div class="weui_cells">
+        <div class="date-btn-group">
+            <a href="javascript:;" class="week-btn weui_btn_mini weui_btn_default">今天</a>
+            <a href="javascript:;" class="week-btn weui_btn_mini weui_btn_default">周二</a>
+            <a href="javascript:;" class="week-btn weui_btn_mini weui_btn_default">周三</a>
+            <a href="javascript:;" class="week-btn weui_btn_mini weui_btn_default">周四</a>
+            <a href="javascript:;" class="week-btn weui_btn_mini weui_btn_default">周五</a>
+            <a href="javascript:;" class="week-btn weui_btn_mini weui_btn_default">周六</a>
+            <a href="javascript:;" class="week-btn weui_btn_mini weui_btn_default">周日</a>
+
+            <a href="javascript:;" class="date-btn weui_btn_plain_default">12/16</a>
+            <a href="javascript:;" class="date-btn weui_btn_plain_default">12/17</a>
+            <a href="javascript:;" class="date-btn weui_btn_plain_default">12/18</a>
+            <a href="javascript:;" class="date-btn weui_btn_plain_primary">12/19</a>
+            <a href="javascript:;" class="date-btn weui_btn_plain_primary">12/20</a>
+            <a href="javascript:;" class="date-btn weui_btn_plain_primary">12/21</a>
+            <a href="javascript:;" class="date-btn weui_btn_plain_primary">12/22</a>
+        </div>
+    </div>
+    <div class="weui_cells_tips">底部说明文字底部说明文字</div>
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    <div></div>
+
+    <div class="weui_cells_title">粗选时间段</div>
+    <div class="weui_cells weui_cells_access">
+        <div class="time-btn-group">
+            <a href="javascript:;" class="time-btn weui_btn_plain_primary">08:00-14:00</a>
+            <a href="javascript:;" class="time-btn weui_btn_plain_primary">12:00-18:00</a>
+            <a href="javascript:;" class="time-btn weui_btn_plain_primary">20:00-24:00</a>
+        </div>
+    </div>
+
+    <br/>
+
+    <div class="weui_cells_title">自定义时间段</div>
+    <div class="weui_cells weui_cells_access">
+        <a class="weui_cell js_cell" href="javascript:;">
+            <div class="weui_cell_bd weui_cell_primary">
+                <p>开始时间选择</p>
+            </div>
+            <div class="weui_cell_ft">未选择</div>
+        </a>
+        <a class="weui_cell js_cell" href="javascript:;">
+            <div class="weui_cell_bd weui_cell_primary">
+                <p>结束时间选择</p>
+            </div>
+            <div class="weui_cell_ft">未选择</div>
+        </a>
+    </div>
+
+    <br/>
+
+    <div class="bd spacing">
+        <div class="button_sp_area spacing">
+            <a href="javascript:;" class="weui_btn weui_btn_plain_primary">一键设置当前全天有空</a>
+        </div>
+        <br/>
+        <a href="javascript:;" class="weui_btn weui_btn_primary" id="showToast">确认提交时间安排表</a>
+    </div>
+
+</div>
+
+        <!--BEGIN toast-->
+        <div id="toast" style="display: none;">
+            <div class="weui_mask_transparent"></div>
+            <div class="weui_toast">
+                <i class="weui_icon_toast"></i>
+                <p class="weui_toast_content">已完成</p>
+            </div>
+        </div>
+        <!--end toast-->
+
+
+
+
+
+<script src="../js/angular.min.js"></script>
+<script src="../js/example.js"></script>
+
+</body>
+</html>
