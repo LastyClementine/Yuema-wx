@@ -22,11 +22,7 @@
             <a class="weui_cell js_cell" href="./Yuema-SetTime.html" ng-click="">
 
                 <div class="weui_cell_bd weui_cell_primary page_desc">
-                    <!--<info1></info1>-->
-                    <!--<info2></info2>-->
-                    <!--<info3></info3>-->
-                    <!--<info4></info4>-->
-                    <!--<info5></info5>-->
+                    <p>{{myopenid}}</p>
                 </div>
                 <div class="weui_cell_ft">
                 </div>
@@ -59,15 +55,15 @@
     <br/>
     <div class="button_lookfortime">
         <a href="Yuema-Timeline.html" class="weui_btn weui_btn_primary">查看群成员共同时间</a>
-        <a href="" class="weui_btn weui_btn_primary" ng-click="getUserInfo()">查看群成员共同时间</a>
+        <a href="" class="weui_btn weui_btn_primary" ng-click="getToken2Store()">getToken2Store</a>
+        <a href="" class="weui_btn weui_btn_primary" ng-click="getUserInfo()">getUserInfo</a>
+        <a href="" class="weui_btn weui_btn_primary" ng-click="getGroupInfo()">getGroupInfo</a>
     </div>
 </div>
 
 <script src="../js/angular.min.js"></script>
 <script src="../js/ngStorage_Yuema.js"></script>
 <script src="../js/App_Yuema.js"></script>
-
-
 
 </body>
 </html>

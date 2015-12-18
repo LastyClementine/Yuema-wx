@@ -1,9 +1,6 @@
 
 
 
-
-
-
 $(function () {
     // page stack
     var stack = [];
