@@ -8,24 +8,25 @@
     <link rel="stylesheet" href="../css/example.css"/>
 
 </head>
-<body ng-app="YuemaApp" ng-controller="">
+<body ng-app="YuemaApp" ng-controller="YuemaAppCtrl">
 <div class="weui_cells">
     <div class="date-btn-group">
-        <a href="javascript:;" class="week-btn weui_btn_mini weui_btn_default">今天</a>
+        <a href="javascript:;" class="week-btn weui_btn_mini weui_btn_default" style="background-color:#FFBE00;color: #fff">今天</a>
         <a href="javascript:;" class="week-btn weui_btn_mini weui_btn_default">周二</a>
         <a href="javascript:;" class="week-btn weui_btn_mini weui_btn_default">周三</a>
         <a href="javascript:;" class="week-btn weui_btn_mini weui_btn_default">周四</a>
         <a href="javascript:;" class="week-btn weui_btn_mini weui_btn_default">周五</a>
         <a href="javascript:;" class="week-btn weui_btn_mini weui_btn_default">周六</a>
         <a href="javascript:;" class="week-btn weui_btn_mini weui_btn_default">周日</a>
-
-        <a href="javascript:;" class="date-btn weui_btn_plain_primary">12/16</a>
-        <a href="javascript:;" class="date-btn weui_btn_plain_primary">12/17</a>
-        <a href="javascript:;" class="date-btn weui_btn_plain_primary">12/18</a>
-        <a href="javascript:;" class="date-btn weui_btn_plain_primary">12/19</a>
-        <a href="javascript:;" class="date-btn weui_btn_plain_primary">12/20</a>
-        <a href="javascript:;" class="date-btn weui_btn_plain_primary">12/21</a>
-        <a href="javascript:;" class="date-btn weui_btn_plain_primary">12/22</a>
+        <ul class="cd-pagination no-space move-buttons custom-icons" style="color: #3CC51F" ng-controller="BtnCtrl">
+            <li><a class="{{btnclass1}}" href="#0" ng-click="btnChg(1)">12/16<br/></a>
+            <li><a class="{{btnclass2}}" href="#0" ng-click="btnChg(2)">12/16<br/></a>
+            <li><a class="{{btnclass3}}" href="#0" ng-click="btnChg(3)">12/16<br/></a>
+            <li><a class="{{btnclass4}}" href="#0" ng-click="btnChg(4)">12/16<br/></a>
+            <li><a class="{{btnclass5}}" href="#0" ng-click="btnChg(5)">12/16<br/></a>
+            <li><a class="{{btnclass6}}" href="#0" ng-click="btnChg(6)">12/16<br/></a>
+            <li><a class="{{btnclass7}}" href="#0" ng-click="btnChg(7)">12/16<br/></a>
+        </ul>
     </div>
 </div>
 <div class="weui_cells_tips">底部说明文字底部说明文字</div>
@@ -66,6 +67,7 @@
 <script src="../js/highcharts.js"></script>
 <script src="../js/highcharts-more.js"></script>
 <script src="../js/YuemaTest.js"></script>
+<script src="../js/App_Yuema.js"></script>
 
 </body>
 </html>

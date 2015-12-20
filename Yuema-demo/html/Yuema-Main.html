@@ -12,16 +12,19 @@
 <body ng-app="YuemaApp" ng-controller="YuemaAppCtrl">
 <div class="page">
     <div class="hd">
-        <h1 class="page_title">YueMa-Test</h1>
-        <p class="page_desc">请选择您的空闲时间，系统自动为你匹配</p>
+        <h2 class="page_title">{{pageuser}}的主页</h2>
+        <p class="page_desc">合理安排空余时间，邀请好友活动起来吧~</p>
     </div>
-    <br/>
-    <br/>
     <div class="bd">
         <div class="weui_cells weui_cells_access global_navs">
             <a class="weui_cell js_cell" href="./Yuema-SetTime.html" ng-click="">
 
                 <div class="weui_cell_bd weui_cell_primary page_desc">
+                    <p>{{myopenid}}</p>
+                    <p>{{myopenid}}</p>
+                    <p>{{myopenid}}</p>
+                    <p>{{myopenid}}</p>
+                    <p>{{myopenid}}</p>
                     <p>{{myopenid}}</p>
                 </div>
                 <div class="weui_cell_ft">
@@ -30,7 +33,6 @@
         </div>
     </div>
     <div class="bd">
-        <br/>
         <br/>
         <div class="weui_cells_title">群成员</div>
         <div class="weui_cells weui_cells_access">
@@ -42,7 +44,8 @@
                 <div class="weui_cell_ft">
                 </div>
             </a>
-            <a class="weui_cell js_cell" style="background-color: #f8f8f8" href="javascript:;">
+
+            <a class="weui_cell js_cell" ng-hide='{{groupowner}}' style="background-color: #f8f8f8" href="javascript:;">
                 <div class="weui_cell_hd"><img src="../images/icon_nav_toast.png" alt="" style="width:20px;margin-right:5px;display:block"></div>
                 <div class="weui_cell_bd weui_cell_primary">
                     <p class="page_desc">邀请新成员</p>
@@ -58,6 +61,7 @@
         <a href="" class="weui_btn weui_btn_primary" ng-click="getToken2Store()">getToken2Store</a>
         <a href="" class="weui_btn weui_btn_primary" ng-click="getUserInfo()">getUserInfo</a>
         <a href="" class="weui_btn weui_btn_primary" ng-click="getGroupInfo()">getGroupInfo</a>
+        <a href="" class="weui_btn weui_btn_primary" ng-click="editGroupInfo()">putGroupInfo</a>
     </div>
 </div>
 

@@ -8,25 +8,26 @@
     <link rel="stylesheet" href="../css/example.css"/>
 
 </head>
-<body ng-app="YuemaApp" ng-controller="">
+<body ng-app="YuemaApp" ng-controller="YuemaAppCtrl">
 <div class="page">
     <div class="weui_cells">
         <div class="date-btn-group">
-            <a href="javascript:;" class="week-btn weui_btn_mini weui_btn_default">今天</a>
+            <a href="javascript:;" class="week-btn weui_btn_mini weui_btn_default" style="background-color:#FFBE00;color: #fff">今天</a>
             <a href="javascript:;" class="week-btn weui_btn_mini weui_btn_default">周二</a>
             <a href="javascript:;" class="week-btn weui_btn_mini weui_btn_default">周三</a>
             <a href="javascript:;" class="week-btn weui_btn_mini weui_btn_default">周四</a>
             <a href="javascript:;" class="week-btn weui_btn_mini weui_btn_default">周五</a>
             <a href="javascript:;" class="week-btn weui_btn_mini weui_btn_default">周六</a>
             <a href="javascript:;" class="week-btn weui_btn_mini weui_btn_default">周日</a>
-
-            <a href="javascript:;" class="date-btn weui_btn_plain_default">12/16</a>
-            <a href="javascript:;" class="date-btn weui_btn_plain_default">12/17</a>
-            <a href="javascript:;" class="date-btn weui_btn_plain_default">12/18</a>
-            <a href="javascript:;" class="date-btn weui_btn_plain_primary">12/19</a>
-            <a href="javascript:;" class="date-btn weui_btn_plain_primary">12/20</a>
-            <a href="javascript:;" class="date-btn weui_btn_plain_primary">12/21</a>
-            <a href="javascript:;" class="date-btn weui_btn_plain_primary">12/22</a>
+            <ul class="cd-pagination no-space move-buttons custom-icons" style="color: #3CC51F" ng-controller="BtnCtrl">
+                <li><a class="{{btnclass1}}" href="#0" ng-click="btnChg(1)">12/16<br/></a>
+                <li><a class="{{btnclass2}}" href="#0" ng-click="btnChg(2)">12/16<br/></a>
+                <li><a class="{{btnclass3}}" href="#0" ng-click="btnChg(3)">12/16<br/></a>
+                <li><a class="{{btnclass4}}" href="#0" ng-click="btnChg(4)">12/16<br/></a>
+                <li><a class="{{btnclass5}}" href="#0" ng-click="btnChg(5)">12/16<br/></a>
+                <li><a class="{{btnclass6}}" href="#0" ng-click="btnChg(6)">12/16<br/></a>
+                <li><a class="{{btnclass7}}" href="#0" ng-click="btnChg(7)">12/16<br/></a>
+            </ul>
         </div>
     </div>
     <div class="weui_cells_tips">底部说明文字底部说明文字</div>
@@ -43,10 +44,10 @@
 
     <div class="weui_cells_title">粗选时间段</div>
     <div class="weui_cells weui_cells_access">
-        <div class="time-btn-group">
-            <a href="javascript:;" class="time-btn weui_btn_plain_primary">08:00-14:00</a>
-            <a href="javascript:;" class="time-btn weui_btn_plain_primary">12:00-18:00</a>
-            <a href="javascript:;" class="time-btn weui_btn_plain_primary">20:00-24:00</a>
+        <div class="time-btn-group" ng-controller="BtnCtrl">
+            <a href="javascript:;" class="time-btn weui_btn_plain_primary {{TimeSelChg1}}" ng-click="TimeSelChg(1)">08:00-14:00</a>
+            <a href="javascript:;" class="time-btn weui_btn_plain_primary {{TimeSelChg2}}" ng-click="TimeSelChg(2)">12:00-18:00</a>
+            <a href="javascript:;" class="time-btn weui_btn_plain_primary {{TimeSelChg3}}" ng-click="TimeSelChg(3)">20:00-24:00</a>
         </div>
     </div>
 
@@ -56,7 +57,7 @@
     <div class="weui_cells weui_cells_access">
         <a class="weui_cell js_cell" href="javascript:;">
             <div class="weui_cell_bd weui_cell_primary">
-                <p>开始时间选择</p>
+                <p>选择开始时间</p>
             </div>
             <div class="weui_cell_ft">未选择</div>
         </a>
@@ -91,9 +92,11 @@
         <!--end toast-->
 
 
+
 <script src="../js/zepto.min.js"></script>
-<!--<script src="../js/angular.min.js"></script>-->
+<script src="../js/angular.min.js"></script>
 <script src="../js/example.js"></script>
+<script src="../js/App_Yuema.js"></script>
 
 </body>
 </html>

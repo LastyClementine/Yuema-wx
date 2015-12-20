@@ -29,6 +29,7 @@ body,html{
 .page,body{
     background-color:#FBF9FE;
     font-family:"Microsoft YaHei","simsun","Helvetica Neue", Arial, Helvetica, sans-serif;
+    background-image: url("../images/bg1.jpg");
 }
 
 .container{
@@ -46,7 +47,7 @@ body,html{
 
 .page_desc{
     text-align:center;
-    color:#888;
+    color:#ffffff;
     font-size:14px
 }
 
@@ -56,7 +57,7 @@ body,html{
 
 .page_title{
     text-align:center;
-    font-size:34px;
+    font-size:30px;
     color:#3CC51F;
     font-weight:400;
     margin:0 15%
@@ -101,7 +102,7 @@ body,html{
     width:60%;
     margin:0 auto;
     text-align:justify;
-    text-justify:distribute-all-lines;
+    /*text-justify:distribute-all-lines;*/
     font-size:0
 }
 
@@ -254,9 +255,9 @@ body,html{
 
 .week-btn{
     position: relative;
-    padding: 1px 26px 1px;
+    padding:.2em .45em .2em;
     padding-left: 11px;
-    padding-right: 10px;
+    padding-right: 11px;
     box-sizing: border-box;
     font-size: 12px;
     text-align: center;
@@ -267,5 +268,87 @@ body,html{
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     overflow: hidden;
 }
+
+
+
+
+a {
+    text-decoration: none;
+}
+
+ul, li
+{
+    padding: 0;
+    vertical-align: baseline;
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+.cd-pagination li {
+    color: #3CC51F;
+    /* hide numbers on small devices */
+    display: none;
+    margin: 0 .2em;
+}
+.cd-pagination a{
+    display: inline-block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* use padding and font-size to change buttons size */
+    padding: .5em .37em;
+    font-size: 1rem;
+    border: 1px solid #e6e6e6;
+    border-radius: 0.25em;
+}
+
+.cd-pagination .current {
+    /* selected number */
+    background-color: #3CC51F;
+    border-color: #3CC51F;
+    color: #ffffff;
+    pointer-events: none;
+}
+.current {
+    /* selected number */
+    background-color: #3CC51F;
+    border-color: #3CC51F;
+    color: #ffffff;
+    /*pointer-events: none;*/
+}
+.cd-pagination li {
+    display: inline-block;
+}
+
+
+/* --------------------------------
+
+No space - remove distance between list items
+
+-------------------------------- */
+.cd-pagination.no-space {
+    width: auto;
+    max-width: none;
+    display: inline-block;
+    border-radius: 0.25em;
+    border: 1px solid #e6e6e6;
+}
+.cd-pagination.no-space li {
+    margin: 0;
+    float: left;
+    border-right: 1px solid #e6e6e6;
+}
+.cd-pagination.no-space a, .cd-pagination.no-space span {
+    float: left;
+    border-radius: 0;
+    border: none;
+}
+
+
 
 

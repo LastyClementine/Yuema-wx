@@ -39,7 +39,9 @@ app.controller('YuemaAppCtrl', function ($scope,$http) {
                     $scope.showGroupErr();
                 }else{
                     console.log(res);
-                    fillGroupInfo2Page(res);
+                    localStorage.setItem('group_name',res.group_name); //存储token到本地存储
+                    localStorage.setItem('group_id',res.id); //存储token到本地存储
+                    //fillGroupInfo2Page(res);
                 }
             })
     };
@@ -50,7 +52,8 @@ app.controller('YuemaAppCtrl', function ($scope,$http) {
         var url = "/group";
         url = url2Callback(url);
         var token = localStorage.getItem('token');
-        $http.post(url,{groupname:"lasty",id:'001'},{headers:{"Authorization":'JWT '+ token}})
+        var group_name = localStorage.getItem('group_name');
+        $http.post(url,{groupname:group_name,id:'001'},{headers:{"Authorization":'JWT '+ token}})
             .success(function(res){
                 if(res.err){
                     console.log(res.err);
@@ -64,9 +67,9 @@ app.controller('YuemaAppCtrl', function ($scope,$http) {
     //附带token至头部作为验证凭证，put模式，修改组信息。获取本token对应的user的group相关信息，填充页面
     $scope.editGroup=function(){
         var token = localStorage.getItem('token');
-        var groupid = localStorage.getItem('groupid');
+        var groupid = localStorage.getItem('group_id');
         var url = "/group";
-        url = url2Callback(url) + groupid;
+        url = url2Callback(url) + '/'+groupid;
         $http.put(url,{headers:{"Authorization":'JWT '+ token}})
             .success(function(res){
                 if(res.err){
@@ -91,7 +94,7 @@ app.controller('YuemaAppCtrl', function ($scope,$http) {
                     $scope.showUserErr();
                 }else{
                     console.log(res);
-                    //$scope.getGroupInfo();//请求用户群组信息，填充页面
+                    $scope.getGroupInfo();//请求用户群组信息，填充页面
                     $scope.fillUserInfo2Page(res);//填充用户信息至页面中
                 }
             })
@@ -115,13 +118,57 @@ app.controller('YuemaAppCtrl', function ($scope,$http) {
     };
 
 
+
+    //-----------------------------------------------------  FILL  THE  PAGE-------------------------------------------------------//
+
     $scope.fillUserInfo2Page=function(res){
+        $scope.groupowner = 'true';
+        $scope.myopenid=res.openid;
+        $scope.pageuser=res.id;
+        //if(res.id == "3"){
+        //     $scope.groupowner = 'false';
+        //}else{
+        //     $scope.groupowner = 'false';
+        //}
+
+    };
+
+    $scope.fillGroupInfo2Page=function(res){
         $scope.myopenid=res.openid;
     };
 
-
-
-
-
     });
+
+
+
+
+app.controller('BtnCtrl', function ($scope,$http) {
+
+    $scope.btnChg = function(btnTurn){
+        $scope.btnclass1='';
+        $scope.btnclass2='';
+        $scope.btnclass3='';
+        $scope.btnclass4='';
+        $scope.btnclass5='';
+        $scope.btnclass6='';
+        $scope.btnclass7='';
+        if(btnTurn ==1){ $scope.btnclass1= "current";}
+        if(btnTurn ==2){ $scope.btnclass2= "current";}
+        if(btnTurn ==3){ $scope.btnclass3= "current";}
+        if(btnTurn ==4){ $scope.btnclass4= "current";}
+        if(btnTurn ==5){ $scope.btnclass5= "current";}
+        if(btnTurn ==6){ $scope.btnclass6= "current";}
+        if(btnTurn ==7){ $scope.btnclass7= "current";}
+    };
+
+    $scope.TimeSelChg = function(btnTurn){
+        $scope.TimeSelChg1='';
+        $scope.TimeSelChg2='';
+        $scope.TimeSelChg3='';
+        if(btnTurn ==1){ $scope.TimeSelChg1= "current";}
+        if(btnTurn ==2){ $scope.TimeSelChg2= "current";}
+        if(btnTurn ==3){ $scope.TimeSelChg3= "current";}
+    };
+
+});
 
