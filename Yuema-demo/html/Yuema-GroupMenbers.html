@@ -1,0 +1,38 @@
+
+<div  data-ng-init="load2()">
+
+<div class="hd">
+    <h2 class="page_title">{{groupname}}的活动群</h2>
+    <p class="page_desc">以下列表是本组成员，如有陌生人请群主删选</p>
+</div>
+
+<div style="margin: 0;background-color: aliceblue;">
+<div class="bd">
+    <br/>
+    <div class="weui_cells_title">群成员</div>
+    <div class="weui_cells weui_cells_access">
+        <a class="weui_cell js_cell" ui-sref="friends" ng-repeat="member in groupmembers.member" ng-click="getUserInfo(menber.user.id)">
+            <div class="weui_cell_hd groupimg" id="headimg2"><img src="{{member.user.headimg_url}}" alt="" style="width:40px;height: 40px;margin-right:10px;display:block"></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <p class="username">{{member.user.backup_name}}</p>
+            </div>
+            <div class="weui_cell_ft">
+            </div>
+        </a>
+        <a class="weui_cell js_cell" style="background-color: #f8f8f8" href="javascript:;">
+            <div class="weui_cell_hd"><img src="./images/icon_nav_toast1.png" alt="" style="width:20px;margin-right:5px;display:block"></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <p class="page_desc" style="color: #04BE02">邀请新的群成员</p>
+            </div>
+            <div class="weui_cell_ft">
+            </div>
+        </a>
+    </div>
+</div>
+<br/>
+<div class="button_lookfortime">
+    <a href="" class="weui_btn weui_btn_primary" ui-sref="timeline">查看群成员共同时间</a>
+</div>
+    <br/>
+</div>
+</div>
